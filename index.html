@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aroma Kicthen - Authentic Indian Cuisine</title>
+    <style>
+        /* New Color Palette */
+        :root {
+            --primary: #9C27B0;  /* Rich purple */
+            --secondary: #FF5722; /* Deep orange */
+            --accent: #FFC107;    /* Golden yellow */
+            --light: #FFF8E1;     /* Cream */
+            --dark: #311B92;      /* Deep purple */
+            --text: #212121;      /* Dark gray */
+            --bg: #F3E5F5;        /* Light lavender */
+            --veg: #4CAF50;      /* Green for vegetarian */
+            --nonveg: #F44336;   /* Red for non-veg */
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            text-align: center;
+            padding: 30px 0;
+            background: linear-gradient(135deg, var(--primary), var(--dark));
+            color: white;
+            margin-bottom: 40px;
+            border-radius: 0 0 15px 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            letter-spacing: 1px;
+        }
+        
+        .tagline {
+            font-style: italic;
+            font-size: 1.2rem;
+            color: var(--light);
+            letter-spacing: 0.5px;
+        }
+        
+        /* Menu Section Styles */
+        .menu-section {
+            margin-bottom: 40px;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            border-left: 5px solid var(--accent);
+        }
+        
+        .section-title {
+            color: var(--primary);
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+            font-size: 1.8rem;
+            display: inline-block;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        /* Menu Item Styles */
+        .menu-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 25px;
+        }
+        
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 15px;
+            border-bottom: 1px dashed #E1BEE7;
+            transition: transform 0.3s ease;
+        }
+        
+        .menu-item:hover {
+            transform: translateX(5px);
+        }
+        
+        .menu-item:last-child {
+            border-bottom: none;
+        }
+        
+        .item-info {
+            flex: 1;
+        }
+        
+        .item-name {
+            font-weight: 600;
+            font-size: 1.2rem;
+            color: var(--dark);
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .item-description {
+            color: #616161;
+            font-size: 0.95rem;
+            font-style: italic;
+        }
+        
+        .item-price {
+            font-weight: bold;
+            color: var(--secondary);
+            white-space: nowrap;
+            margin-left: 20px;
+            font-size: 1.1rem;
+        }
+        
+        .veg-icon {
+            color: var(--veg);
+            font-size: 1rem;
+            margin-right: 8px;
+        }
+        
+        .non-veg-icon {
+            color: var(--nonveg);
+            font-size: 1rem;
+            margin-right: 8px;
+        }
+        
+        /* Category Headers */
+        .category-header {
+            color: var(--dark);
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 2px dotted var(--primary);
+            font-size: 1.3rem;
+        }
+        
+        /* Footer Styles */
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: linear-gradient(135deg, var(--dark), var(--primary));
+            color: white;
+            margin-top: 50px;
+            border-radius: 15px 15px 0 0;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 15px;
+        }
+        
+        .footer-links a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+        
+        /* Special Badge for Chef's Recommendations */
+        .special-badge {
+            background-color: var(--accent);
+            color: var(--dark);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            font-weight: bold;
+            margin-left: 10px;
+            display: inline-block;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .menu-items {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .menu-item {
+                flex-direction: column;
+            }
+            
+            .item-price {
+                margin-left: 0;
+                margin-top: 8px;
+                align-self: flex-end;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-utensils"></i> Aroma Kicthen</h1>
+            <p class="tagline">Where Tradition Meets Taste</p>
+        </div>
+    </header>
+    
+    <main class="container">
+        <!-- Starters & Snacks Section -->
+        <section class="menu-section">
+            <h2 class="section-title">Starters & Snacks</h2>
+            
+            <div class="menu-items">
+                <!-- Vegetarian Starters -->
+                <div>
+                    <h3 class="category-header" style="color: var(--veg);">Vegetarian</h3>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4 class="item-name"><i class="fas fa-leaf veg-icon"></i> Paneer Tikka <span class="special-badge">Chef's Special</span></h4>
+                            <p class="item-description">Cubes of marinated cottage cheese grilled to perfection in tandoor</p>
+                        </div>
+                        <span class="item-price">₹220</span>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4 class="item-name"><i class="fas fa-leaf veg-icon"></i> Aloo Tikki Chaat</h4>
+                            <p class="item-description">Spiced potato patties topped with yogurt and tangy chutneys</p>
+                        </div>
+                        <span class="item-price">₹180</span>
+                    </div>
+                    
+                    <!-- More vegetarian items... -->
+                </div>
+                
+                <!-- Non-Vegetarian Starters -->
+                <div>
+                    <h3 class="category-header" style="color: var(--nonveg);">Non-Vegetarian</h3>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4 class="item-name"><i class="fas fa-drumstick-bite non-veg-icon"></i> Chicken 65 <span class="special-badge">Spicy</span></h4>
+                            <p class="item-description">Fiery red crispy chicken bites with curry leaves</p>
+                        </div>
+                        <span class="item-price">₹280</span>
+                    </div>
+                    
+                    <!-- More non-vegetarian items... -->
+                </div>
+            </div>
+        </section>
+        
+        <!-- Main Courses Section -->
+        <section class="menu-section">
+            <h2 class="section-title">Main Courses</h2>
+            
+            <div class="menu-items">
+                <!-- Vegetarian Mains -->
+                <div>
+                    <h3 class="category-header" style="color: var(--veg);">Vegetarian</h3>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4 class="item-name"><i class="fas fa-leaf veg-icon"></i> Dal Makhani</h4>
+                            <p class="item-description">Creamy black lentils simmered overnight with butter</p>
+                        </div>
+                        <span class="item-price">₹240</span>
+                    </div>
+                    
+                    <!-- More vegetarian mains... -->
+                </div>
+                
+                <!-- Non-Vegetarian Mains -->
+                <div>
+                    <h3 class="category-header" style="color: var(--nonveg);">Non-Vegetarian</h3>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4 class="item-name"><i class="fas fa-drumstick-bite non-veg-icon"></i> Butter Chicken <span class="special-badge">Popular</span></h4>
+                            <p class="item-description">Iconic tomato-cream chicken curry with butter</p>
+                        </div>
+                        <span class="item-price">₹320</span>
+                    </div>
+                    
+                    <!-- More non-vegetarian mains... -->
+                </div>
+            </div>
+        </section>
+        
+        <!-- More sections... -->
+        
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>Open Daily: 11:00 AM - 11:00 PM</p>
+            <p>123 Spice Lane, Food District | <i class="fas fa-phone"></i> (555) 123-4567</p>
+            <div class="footer-links">
+                <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+                <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+                <a href="#"><i class="fas fa-map-marker-alt"></i> Directions</a>
+            </div>
+        </div>
+    </footer>
+</body>
