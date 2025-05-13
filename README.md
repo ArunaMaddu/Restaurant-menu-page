@@ -88,7 +88,7 @@ License
 Distributed under the MIT License. See LICENSE for more information.
 
 Contact
-Your Name - @ Maddu Aruna - madduaruna134l@example.com
+Your Name - @ Maddu Aruna - madduaruna134@gmail.com
 
 Project Link:  https://arunamaddu.github.io/Restaurant-menu-page/
 
@@ -97,6 +97,6 @@ Project Link:  https://arunamaddu.github.io/Restaurant-menu-page/
 If you like this project, feel free to ⭐ star it and share it with others!
 
 
-👨‍💻 Created by Maddu Aruna
+👨‍💻 Created by ArunaMaddu
 
 
