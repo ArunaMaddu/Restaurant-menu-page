@@ -25,7 +25,7 @@ A responsive, interactive restaurant menu webpage that beautifully displays food
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/restaurant-menu.git
+git clone https://github.com/ArunaMaddu/restaurant-menu.git
 Open index.html in your browser:
 
 bash
